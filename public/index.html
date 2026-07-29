@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pro Irenku ❤️</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐔</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #fff4e6; font-family: 'Baloo 2', sans-serif; overflow-x: hidden; }
+  a { color: #c2410c; } a:hover { color: #9a3412; }
+  @keyframes fall {
+    0% { transform: translateY(-25vh) rotate(var(--rot)); }
+    100% { transform: translateY(115vh) rotate(var(--rot)); }
+  }
+  @keyframes wobble {
+    0%, 100% { transform: rotate(-8deg); }
+    50% { transform: rotate(8deg); }
+  }
+  @keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.06) rotate(-2deg); }
+    100% { transform: scale(1); }
+  }
+</style>
+</head>
+<body>
+<div style="position: relative; min-height: 100vh; width: 100%; overflow: hidden; background: linear-gradient(180deg, #fff4e6 0%, #ffe8d1 100%);">
+  <div id="chickens" style="position: absolute; inset: 0; pointer-events: none; z-index: 1;"></div>
+  <div style="position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 36px; padding: 72px 24px 96px; max-width: 760px; margin: 0 auto; text-align: center;">
+    <div style="background: #c2410c; color: #fff7ed; font-weight: 800; font-size: 14px; letter-spacing: 0.18em; text-transform: uppercase; padding: 8px 20px; border-radius: 999px; box-shadow: 0 4px 0 #7c2d12;">Oficiální prohlášení lásky</div>
+    <h1 style="margin: 0; font-size: clamp(52px, 9vw, 96px); font-weight: 800; line-height: 1.02; color: #431407; animation: pop 3.5s ease-in-out infinite;">Irenko,<br>MILUJU TĚ! ❤️</h1>
+    <p style="margin: 0; font-size: clamp(20px, 3vw, 28px); font-weight: 600; color: #7c2d12; line-height: 1.4; max-width: 34ch; text-wrap: pretty;">Miluju tebe, tvůj zadek a tvoje vaření. Přesně v tomhle pořadí. Nebo obráceně. Prostě úplně všechno.</p>
+    <div style="background: #fffbf5; border: 3px solid #431407; border-radius: 20px; box-shadow: 8px 8px 0 #c2410c; padding: 32px 36px; max-width: 520px; text-align: left; display: flex; flex-direction: column; gap: 14px; transform: rotate(-1.2deg);">
+      <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+        <div style="font-size: 26px; font-weight: 800; color: #431407;">Kuře na paprice</div>
+        <div style="font-size: 15px; font-weight: 600; color: #9a3412; white-space: nowrap;">včera večer</div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="color: #f59e0b; font-size: 26px; letter-spacing: 2px;">★★★★★</div>
+        <div style="font-weight: 800; color: #431407; font-size: 18px;">5,0 / 5</div>
+      </div>
+      <p style="margin: 0; font-size: 18px; color: #7c2d12; line-height: 1.5; text-wrap: pretty;">„Naprostá dokonalost. Omáčka tak božská, že jsem zvažoval vylízat talíř. (Vylízal jsem ho.) Babičky celé republiky mohou jít do důchodu.“</p>
+      <div style="font-size: 15px; font-weight: 700; color: #9a3412;">— ověřený strávník (a tvůj budoucí manžel)</div>
+      <div style="border-top: 2px dashed #fdba74; padding-top: 12px; font-size: 14px; font-weight: 600; color: #b45309;">Doporučuje: 1 z 1 snoubenců 🐔🌶️</div>
+    </div>
+    <p style="margin: 0; font-size: 15px; font-weight: 600; color: #b45309;">Toto prohlášení je právně závazné a platí navždy.</p>
+  </div>
+</div>
+
+<template id="chicken-template">
+  <div style="position: absolute; top: 0;">
+    <div style="position: relative; line-height: 1; animation-name: wobble; animation-timing-function: ease-in-out; animation-iteration-count: infinite; filter: drop-shadow(0 6px 10px rgba(154, 52, 18, 0.18)); opacity: 0.95; width: 2.3em; height: 2.6em;">
+      <span style="display: block; position: absolute; bottom: 0; left: 0.05em; font-size: 2em; transform: rotate(60deg); z-index: 1;">🌶️</span>
+      <svg viewBox="0 0 100 110" style="position: absolute; top: -0.1em; left: 0.62em; width: 1.7em; height: 1.85em; z-index: 2; overflow: visible;">
+        <g stroke="#2b2320" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M30 16 Q22 2 33 6 Q35 -3 45 5 Q54 -1 52 11 Q60 9 54 20 Z" fill="#e63753"></path>
+          <path d="M76 40 Q94 30 96 46 Q97 56 87 58 Q97 62 91 72 Q85 80 74 72 Z" fill="#fffbf5"></path>
+          <path d="M62 42 Q62 22 78 14 Q82 24 74 34 Q82 30 87 36 Q80 48 66 50 Z" fill="#fffbf5"></path>
+          <path d="M36 12 C22 12 12 24 12 38 C12 46 15 53 21 58 C15 64 13 72 17 79 C23 89 41 94 57 92 C73 90 83 80 84 66 C85 56 80 48 72 44 C70 30 56 12 36 12 Z" fill="#fffbf5"></path>
+          <path d="M44 90 Q42 98 34 99 M44 90 Q45 100 39 103 M44 90 Q49 98 53 97" fill="none" stroke="#f5a623" stroke-width="4.5"></path>
+          <path d="M62 88 Q60 96 52 97 M62 88 Q63 98 57 101 M62 88 Q67 96 71 95" fill="none" stroke="#f5a623" stroke-width="4.5"></path>
+          <path d="M46 58 Q66 52 72 62 Q66 76 48 71 Q41 64 46 58 Z" fill="#fffbf5"></path>
+          <path d="M31 40 L19 45 L31 50 Z" fill="#f5a623"></path>
+          <path d="M31 50 Q26 62 35 60 Q40 55 34 50 Z" fill="#e63753"></path>
+        </g>
+        <circle cx="28" cy="35" r="3.4" fill="#2b2320"></circle>
+        <circle cx="43" cy="35" r="3.4" fill="#2b2320"></circle>
+        <path d="M37 47 Q41 51 46 48" fill="none" stroke="#2b2320" stroke-width="2.5" stroke-linecap="round"></path>
+      </svg>
+    </div>
+  </div>
+</template>
+
+<script>
+(() => {
+  const count = 12;
+  const speed = 1;
+  // deterministic pseudo-random
+  const rand = (i, salt) => {
+    const x = Math.sin(i * 127.1 + salt * 311.7) * 43758.5453;
+    return x - Math.floor(x);
+  };
+  const layer = document.getElementById('chickens');
+  const template = document.getElementById('chicken-template');
+  for (let i = 0; i < count; i++) {
+    const node = template.content.firstElementChild.cloneNode(true);
+    node.style.left = (((i + 0.1 + rand(i, 1) * 0.8) / count) * 94 + 1).toFixed(1) + '%';
+    node.style.animation = 'fall ' + (14 / speed + rand(i, 2) * 10 / speed).toFixed(1) + 's linear infinite';
+    node.style.animationDelay = (-rand(i, 3) * 24).toFixed(1) + 's';
+    node.style.setProperty('--rot', ((rand(i, 4) * 70) - 35).toFixed(0) + 'deg');
+    const inner = node.firstElementChild;
+    inner.style.fontSize = (28 + rand(i, 5) * 34).toFixed(0) + 'px';
+    inner.style.animationDuration = (2.2 + rand(i, 6) * 2.5).toFixed(1) + 's';
+    layer.appendChild(node);
+  }
+})();
+</script>
+</body>
+</html>
