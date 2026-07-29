@@ -76,7 +76,8 @@
 
 <script>
 (() => {
-  const count = 12;
+  const mobile = window.matchMedia('(max-width: 640px)').matches;
+  const count = mobile ? 7 : 12;
   const speed = 1;
   // deterministic pseudo-random
   const rand = (i, salt) => {
@@ -92,7 +93,8 @@
     node.style.animationDelay = (-rand(i, 3) * 24).toFixed(1) + 's';
     node.style.setProperty('--rot', ((rand(i, 4) * 70) - 35).toFixed(0) + 'deg');
     const inner = node.firstElementChild;
-    inner.style.fontSize = (28 + rand(i, 5) * 34).toFixed(0) + 'px';
+    inner.style.fontSize = (mobile ? 16 + rand(i, 5) * 16 : 28 + rand(i, 5) * 34).toFixed(0) + 'px';
+    if (mobile) inner.style.opacity = '0.55';
     inner.style.animationDuration = (2.2 + rand(i, 6) * 2.5).toFixed(1) + 's';
     layer.appendChild(node);
   }
