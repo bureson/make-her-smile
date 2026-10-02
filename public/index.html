@@ -9,7 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Bricolage+Grotesque:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
-  body { margin: 0; background: #0e4f4c; font-family: 'Bricolage Grotesque', sans-serif; overflow-x: hidden; }
+  /* overflow-anchor: none keeps the browser from restoring scroll relative to animated/tilted elements, which made the page creep on every reload */
+  body { margin: 0; background: #0e4f4c; font-family: 'Bricolage Grotesque', sans-serif; overflow-x: hidden; overflow-anchor: none; }
   a { color: #f4b23e; } a:hover { color: #ff5d8f; }
   @keyframes fall { 0% { transform: translateY(-25vh) rotate(var(--rot)); } 100% { transform: translateY(115vh) rotate(var(--rot)); } }
   @keyframes wobble { 0%, 100% { transform: rotate(-8deg); } 50% { transform: rotate(8deg); } }
@@ -34,7 +35,7 @@
 </head>
 <body>
 <div style="position: relative; min-height: 100vh; width: 100%; overflow: hidden; background: #0e4f4c;">
-  <div style="position: absolute; left: 50%; top: 420px; width: 1600px; height: 1600px; border-radius: 50%; background: repeating-conic-gradient(#0e4f4c 0deg 10deg, #125a56 10deg 20deg); transform: translate(-50%, -50%); animation: spin 120s linear infinite; pointer-events: none; overflow-anchor: none;"></div>
+  <div style="position: absolute; left: 50%; top: 420px; width: 1600px; height: 1600px; border-radius: 50%; background: repeating-conic-gradient(#0e4f4c 0deg 10deg, #125a56 10deg 20deg); transform: translate(-50%, -50%); animation: spin 120s linear infinite; pointer-events: none;"></div>
   <div id="icons" style="position: fixed; inset: 0; pointer-events: none; z-index: 1;"></div>
   <nav id="menu" style="position: fixed; top: 14px; right: 16px; z-index: 60; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; font-weight: 800; font-size: 17px;">
     <button id="menu-toggle" class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="menu-list" style="width: 44px; height: 44px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; padding: 0; cursor: pointer; background: #fdf0d5; border: 3px solid #10302e; border-radius: 50%; box-shadow: 4px 4px 0 #ff5d8f;">
